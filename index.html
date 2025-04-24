@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empty Page</title>
+
+
+
+    <style> 
+
+        body, html {
+           background-color: black;
+           color: rgba(255, 245, 238, 0.9);
+           font-family: Helvetica ;
+           font-size: 22px;;
+           
+        }
+
+        body {
+            color: rgba(255, 245, 238, 0.9); /* seashell with 90% opacity */
+        }
+
+        .header {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px;
+            opacity: 0.9;
+        }
+
+        .header ul  {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;;
+            padding: 0;
+            margin: 0;
+            text-decoration: underline;
+        }
+
+        .header img {
+            padding-left: 10px;
+            padding-right: 50px;;
+        }
+
+        .img-background {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           position: relative;
+           opacity: 0.7;
+        }
+        
+
+        .img-background img {
+            height: 700px;
+            width: 1200px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .img-background .middletext {
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+            justify-content: center;
+            background-color:black;
+            position: absolute;
+            width: 100%;
+            font-family: Helvetica;
+            color: rgba(255, 245, 238, 0.9);
+
+            z-index: 2;
+            }
+
+        .img-background .middletext p {
+            font-family: Helvetica;
+            color: rgba(255, 245, 238, 0.9);
+
+        }    
+
+        .middletext {
+            font-family: Helvetica;
+            font-size: 22px;
+            color: seashell;
+        }
+
+        .secondhead {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+
+        .secondhead {
+            font-size: 22px;
+        }
+
+        .secondhead h5 {
+            font-family: Helvetica;
+            font-size: 22px;
+            color: seashell;
+        }
+
+        .imgrow-1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding-bottom: 10px;
+            opacity: 0.7;
+            
+        }
+
+        .imgrow-1 img {
+            width: 300px;
+            height:200px;
+        }
+        
+        .imgrow-1 p {}
+        
+        .imgrow-2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 30px; 
+            opacity: 0.7;
+        }
+
+        .imgrow-2 img {
+            width: 300px;
+            height:200px;
+        }
+
+        .row1-text {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 170px;
+        }
+
+        .row2-text {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+        }
+
+        .image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-block img {
+  width: 300px;
+  height: 200px;
+}
+
+.image-block p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.foot-container  {
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    padding-bottom: 110px;
+    opacity: 0.7;
+}
+
+
+.background-img img{
+    position: relative;
+    width: 1200px;
+    height: 625px;
+}
+
+.background-img {
+    position: relative;
+    width: 1200px;
+    height: 500px;
+}
+
+
+.location-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.location-overlay h1 {
+  transform: translateY(-100px); /* move up by 100px */
+  margin: 0; /* optional: removes default margin */
+}
+
+
+.black-container {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* <-- add this */
+    margin: -15px -40px;
+}
+
+.blackbox {
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    padding: 10px 20px;
+}
+
+.blackbox h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.blackbox p {
+    text-align: center;
+    line-height: 3rem;
+}
+
+
+.bottom-content {
+display: flex;
+align-items: center;
+justify-content: center;
+padding-bottom: 40px;
+opacity: 0.7;
+}
+
+.copyright {
+   display: flex;
+   align-items: flex-start;
+}
+
+.copyright p {
+    font-size: 22px;
+    padding-left: 20px;
+    font-family: Helvetica;
+    opacity: 0.7;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+<img src="Img/img-tea-cozy-logo.png">
+    <nav> 
+        <ul>
+        <li> Mission </li>
+        <li> Featured Tea </li>
+        <li> Locations </li>
+    </ul>
+    </nav>
+</header>
+<main> 
+<div class="img-background">
+<div class="middletext"> <h2> Our Mission </h2>
+    <p> Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea  </p> </div> 
+<img src="./Img/img-mission-background (1).jpg">
+</div>
+
+<div class="secondhead">
+<h5> Tea of the Month </h5>
+<p> What's Steeping at the Tea Cozy? <p>
+</div>
+
+
+<div class="imgrow-1">
+    <div class="image-block">
+      <img src="./Img/img-berryblitz.jpg">
+      <p>Fall Berry Blitz Tea</p>
+    </div>
+    <div class="image-block">
+      <img src="./Img/img-spiced-rum.jpg">
+      <p>Spiced Rum Tea</p>
+    </div>
+    <div class="image-block">
+      <img src="./Img/img-donut.jpg">
+      <p>Seasonal Donuts</p>
+    </div>
+  </div>
+
+  <div class="imgrow-2">
+    <div class="image-block">
+      <img src="./Img/img-donut.jpg">
+      <p>Myrtle Ave Tea </p>
+    </div>
+    <div class="image-block">
+      <img src="./Img/img-bedford-bizarre.jpg">
+      <p>Spiced Rum Tea</p>
+    </div>
+   </div>
+  
+
+
+  
+<!--
+<div class="imgrow-1">
+<img src="./Img/img-berryblitz.jpg">
+<img src="./Img/img-spiced-rum.jpg">
+<img src="./Img/img-donut.jpg">
+</div>
+
+    <div class="row1-text">
+        <p> Fall Berry Blitz Tea</p>
+        <p>Spiced Rum Tea</p>
+        <p> Seasonal Donuts </p>
+    </div>
+
+
+<div class="imgrow-2">
+<img src="./Img/img-donut.jpg">
+<img src="./Img/img-bedford-bizarre 2.jpg">
+  </div>
+
+  <div class="row2-text">
+        <p> Myrtle Ave Tea </p>
+        <p> Bedford Bizzare Tea </p>
+  </div>
+-->
+
+
+</main>
+
+<footer> 
+
+    <div class="foot-container">
+        <div class="background-img">
+          <img src="./Img/img-locations-background (1).jpg" alt="Background">
+          <div class="location-overlay">
+            <h1>Locations</h1>
+             </div> 
+           <div class="black-container">
+           <div class="blackbox">
+            <h1> Downtown </h1>
+            <p> 384 West 4th St <br> Suite 108 <br> Portland, Maine </p>
+           </div> 
+            <div class="blackbox"> <h1> East Bayside </h1>
+                <p> 3433 Phisherman's Avenue  <br> (Northwest Corner) <br> Portland, Maine </p>
+            </div> 
+            <div class="blackbox"> <h1> Oakdale </h1>
+                <p> 515 Crescent Avenue <br> Second Floor <br> Portland, Maine </p>
+            </div>   </div>   
+        </div>
+    </div>
+        </div>
+    
+
+
+<div class="bottom-content">
+<div class="foot-center">
+<h2> The Tea Cozy </h2>
+<h5> contact@teacozy.com </h5>
+<p> 917-555-8904 </p>
+</div>
+</div>
+<div class="copyright">
+    <p> copyright The Tea Cozy 2017 </p>
+</div>
+
+
+</footer>
+
+
+
+
+</body>
+
+
+
+</html>
