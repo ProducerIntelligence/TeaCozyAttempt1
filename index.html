@@ -28,14 +28,19 @@
             padding: 10px;
             border-bottom: 1px;
             opacity: 0.9;
+            position: fixed; /* your fixed position */
+            top: 0; /* so it stays stuck to the top */
+            width: 100%; /* <-- THIS is what you need */
+            z-index: 1;
         }
 
         .header ul  {
             display: flex;
-            flex-direction: row;
+            flex-direction:row;
             list-style: none;
             gap: 20px;;
-            padding: 0;
+            padding: 20;
+            padding-right: 25px;
             margin: 0;
             text-decoration: underline;
         }
@@ -103,19 +108,20 @@
 
         .secondhead {
             font-size: 22px;
+            opacity: 0.7;
         }
 
         .secondhead h5 {
             font-family: Helvetica;
             font-size: 22px;
             color: seashell;
+            opacity: 0.7;
         }
 
         .imgrow-1 {
             display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 30px;
             padding-bottom: 10px;
             opacity: 0.7;
@@ -131,9 +137,8 @@
         
         .imgrow-2 {
             display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 30px; 
             opacity: 0.7;
         }
@@ -233,7 +238,7 @@
 }
 
 .blackbox {
-    background-color: red;
+    background-color: black;
     height: 300px;
     width: 300px;
     padding: 10px 20px;
@@ -270,6 +275,18 @@ opacity: 0.7;
     opacity: 0.7;
 }
 
+
+a {
+    font-family: Helvetica;
+    color: seashell;
+}
+
+
+h2, h3, h4 {
+    margin: ;
+}
+
+
     </style>
 </head>
 <body>
@@ -277,20 +294,20 @@ opacity: 0.7;
 <img src="Img/img-tea-cozy-logo.png">
     <nav> 
         <ul>
-        <li> Mission </li>
-        <li> Featured Tea </li>
-        <li> Locations </li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#featured">Featured Tea</a></li>
+            <li><a href="#locations">Locations</a></li>
     </ul>
     </nav>
 </header>
 <main> 
-<div class="img-background">
+<div class="img-background" id="mission">
 <div class="middletext"> <h2> Our Mission </h2>
     <p> Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea  </p> </div> 
 <img src="./Img/img-mission-background (1).jpg">
 </div>
 
-<div class="secondhead">
+<div class="secondhead" id="featured">
 <h5> Tea of the Month </h5>
 <p> What's Steeping at the Tea Cozy? <p>
 </div>
@@ -355,7 +372,7 @@ opacity: 0.7;
 
 <footer> 
 
-    <div class="foot-container">
+    <div class="foot-container" id="locations">
         <div class="background-img">
           <img src="./Img/img-locations-background (1).jpg" alt="Background">
           <div class="location-overlay">
